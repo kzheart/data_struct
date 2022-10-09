@@ -10,5 +10,7 @@
 #include "Sequence/SequenceList.h"
 
 int main(int argc, const char * argv[]) {
+    char* string = "sb";
+    printf("%lu", sizeof(bool));
     return 0;
 }
