@@ -3,7 +3,7 @@
 //
 
 #include "Common.h"
-#include "stdio.h"
+#include <cstdio>
 
 void print_array(int a[], int length) {
     for (int i = 0; i < length; ++i) {
