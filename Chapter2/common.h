@@ -58,12 +58,37 @@ void endBuildLinkListHead(LinkList &l, int a[], int length) {
     }
 }
 
+/**
+ * 带头节点单链表插入节点
+ * 0代表插入最前面
+ */
+void insertNodeHead(LinkList l, int index, LinkNode *node) {
+    int count = 0;
+    LinkNode *p = l->next;
+    LinkNode *pre = l;
+    while (p != NULL) {
+        if (count == index) {
+            node->next = p;
+            pre->next = node;
+            break;
+        }
+        count++;
+        pre = p;
+        p = p->next;
+    }
+    //插入到最后结点
+    if (count == index) {
+        node->next = p;
+        pre->next = node;
+    }
+}
+
 
 void printLinkList(LinkList l) {
     LinkList p = l;
     printf("\n");
     while (p != NULL) {
-        printf("%d", p->data);
+        printf("%d ", p->data);
         p = p->next;
     }
     printf("\n");
