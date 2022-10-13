@@ -48,7 +48,7 @@ void initCycleDoubleHead(DoubleLinkListFreq &l, int a[], int length) {
 }
 
 /**
- * 算法思想 每次找到对应元素将其访问频度加1 并且放置表头
+ * 算法思想 每次找到对应元素将其访问频度加1 然后从表头开始找到第一个比他频度要大的，没有则在表头，然后插到后面
  */
 DoubleLinkNodeFreq *Locate(DoubleLinkListFreq l, int x) {
     DoubleLinkNodeFreq *p = l->next;
@@ -62,9 +62,9 @@ DoubleLinkNodeFreq *Locate(DoubleLinkListFreq l, int x) {
             while (p->prep < pp->next->prep) {
                 pp = pp->next;
             }
-            p->next = pp->next;//让p连接到l后面那个
-            pp->next->pre = p;//l后面那个连接到p
-            pp->next = p;//再让l连接p
+            p->next = pp->next;//让p连接pp后面那个
+            pp->next->pre = p;//pp后面那个连接到p
+            pp->next = p;//再让pp连接p
             p->pre = pp;
             return p;
         }
