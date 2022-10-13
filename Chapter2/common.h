@@ -17,7 +17,70 @@ typedef struct LinkNode {
     int data{};
     struct LinkNode *next = NULL;
 } LinkNode, *LinkList;
+/**
+ * 双链表
+ */
+typedef struct DoubleLinkNode {
+    int data;
+    struct DoubleLinkNode *pre = NULL;
+    struct DoubleLinkNode *next = NULL;
+} DoubleLinkNode, *DoubleLinkList;
 
+
+/**
+ * 循环双链表初始化 带头结点
+ * @param l
+ * @param a
+ */
+void initCycleDoubleHead(DoubleLinkList &l, int a[], int length) {
+    l = (DoubleLinkList) malloc(sizeof(DoubleLinkNode));
+    l->next = l;
+    l->pre = l;
+    DoubleLinkNode *rear = l;
+    for (int i = 0; i < length; i++) {
+        DoubleLinkNode *p = (DoubleLinkNode *) malloc(sizeof(DoubleLinkNode));
+        p->data = a[i];
+        rear->next = p;//尾结点连接至当前结点
+        p->pre = rear;
+        p->next = l;
+        l->pre = p;
+        rear = p;
+    }
+}
+
+/**
+ * 循环单链表初始化
+ */
+void initCycleSingleHead(LinkList &l, int a[], int length) {
+    l = (LinkList) malloc(sizeof(LinkNode));
+    l->next = l;
+    LinkNode *rear = l;
+    for (int i = 0; i < length; i++) {
+        LinkNode *p = (LinkNode *) malloc(sizeof(LinkNode));
+        p->data = a[i];
+        rear->next = p;
+        p->next = l;
+        rear = p;
+    }
+}
+
+
+/**
+ * 打印循环双链表
+ */
+void printCycleDoubleList(DoubleLinkList l) {
+    DoubleLinkNode *p = l->next;
+    printf("\n");
+    while (p != l) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+}
+
+/**
+ * 打印顺序表
+ */
 void printSqList(SqList list) {
     printf("\n");
     for (int i = 0; i < list.length; i++) {
@@ -83,9 +146,11 @@ void insertNodeHead(LinkList l, int index, LinkNode *node) {
     }
 }
 
-
+/**
+ * 打印非循环单链表
+ */
 void printLinkList(LinkList l) {
-    LinkList p = l;
+    LinkList p = l->next;
     printf("\n");
     while (p != NULL) {
         printf("%d ", p->data);
@@ -93,6 +158,19 @@ void printLinkList(LinkList l) {
     }
     printf("\n");
 
+}
+
+/**
+ * 打印循环单链表
+ */
+void printCycleLinkList(LinkList l) {
+    LinkNode *p = l->next;
+    printf("\n");
+    while (p != l) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
 }
 
 void initSqList(SqList &list, int a[], int length) {
