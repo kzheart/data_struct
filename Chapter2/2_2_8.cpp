@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/9.
 //
-#include "common.h"
+#include "list.h"
 
 void singleReverse(int a[], int start, int end) {
     for (int i = start; i < (end + start + 1) / 2; i++) {

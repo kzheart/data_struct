@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/11.
 //
-#include "common.h"
+#include "list.h"
 
 void delMinNode(LinkList l) {
     LinkNode *pre = l;//记录最小节点的前驱

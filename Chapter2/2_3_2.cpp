@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/10.
 //
-#include "common.h"
+#include "list.h"
 
 void delX(LinkList l, int x) {
     LinkNode *pre = l;//前一个指针

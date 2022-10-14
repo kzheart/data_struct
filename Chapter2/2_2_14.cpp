@@ -2,7 +2,7 @@
 // Created by kzheart on 2022/10/10.
 //
 
-#include "common.h"
+#include "list.h"
 
 int abss(int a) { return a >= 0 ? a : -a; }
 

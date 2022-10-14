@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/9.
 //
-#include "common.h"
+#include "list.h"
 
 SqList merge(SqList a, SqList b) {
     int i = 0;//指向a的指针

@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/12.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 算法思想 两个链表两个指针 哪个小哪个往后移动 移动之后判断是否相等 相等则加回去

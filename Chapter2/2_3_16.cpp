@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/13.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * a: 1 2 3 4 5 6

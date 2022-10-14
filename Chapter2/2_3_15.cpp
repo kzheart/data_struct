@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/12.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 算法思想:同上一个题类似不过该题找到结点之后是将结点放回a中

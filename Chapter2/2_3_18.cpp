@@ -2,7 +2,7 @@
 // Created by kzheart on 2022/10/13.
 //
 
-#include "common.h"
+#include "list.h"
 
 void merge(LinkList h1, LinkList h2) {
     if (h2->next == h2)

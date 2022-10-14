@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/13.
 //
-#include "common.h"
+#include "list.h"
 
 void cycleDelMin(LinkList &l) {
     //每一个轮循环都找到一个最小值然后删除

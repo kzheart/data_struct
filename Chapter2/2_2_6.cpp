@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/9.
 //
-#include "common.h"
+#include "list.h"
 
 bool DeleteSame(SqList &s) {
     if (s.length <= 0)

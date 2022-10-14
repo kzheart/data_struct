@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/9.
 //
-#include "common.h"
+#include "list.h"
 
 //折半查找 找到则返回位置 找不到返回-1
 int halfFind(int a[], int length, int x, int &end) {

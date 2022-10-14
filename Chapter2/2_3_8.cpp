@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/11.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 两个循环暴力搜 默认为带头节点的链表

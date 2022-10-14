@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/8.
 //
-#include "common.h"
+#include "list.h"
 
 bool DeleteMin(SqList &sqList, int &x) {
     if (sqList.length <= 0) {

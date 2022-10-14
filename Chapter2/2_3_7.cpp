@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/11.
 //
-#include "common.h"
+#include "list.h"
 
 void delInRange(LinkList l, int a, int b) {
     LinkNode *p = l->next;

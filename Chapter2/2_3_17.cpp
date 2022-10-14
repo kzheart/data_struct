@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/13.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 算法思想 两个指针 一个正着遍历一个倒着遍历 判断是否相同

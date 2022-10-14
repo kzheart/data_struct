@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/10.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 逆向输出可以想到栈，而递归就是系统自动实现的栈 无需自己定义栈结构

@@ -2,7 +2,7 @@
 // Created by kzheart on 2022/10/10.
 //
 
-#include "common.h"
+#include "list.h"
 
 void reverse(int a[], int start, int end) {
     for (int i = start; i < (start + end + 1) / 2; i++) {

@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/8.
 //
-#include "common.h"
+#include "list.h"
 
 void DeleteX(SqList &l, int x) {
     int k = 0;

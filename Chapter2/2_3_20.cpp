@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/13.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 带访问频度的头指针双向链表

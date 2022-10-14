@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/8.
 //
-#include "common.h"
+#include "list.h"
 
 void reverse(SqList &l) {
     for (int i = 0; i < l.length / 2; i++) {

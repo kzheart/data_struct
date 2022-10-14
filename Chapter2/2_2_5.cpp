@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/9.
 //
-#include "common.h"
+#include "list.h"
 
 bool DeleteInST(SqList &l, int s, int t) {
     if (s >= t)

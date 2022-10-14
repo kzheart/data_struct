@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/11.
 //
-#include "common.h"
+#include "list.h"
 
 void freeP(LinkNode *pre) {
     LinkNode *p = pre->next;

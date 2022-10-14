@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/12.
 //
-#include "common.h"
+#include "list.h"
 
 /**
  * 算法思想： 两个单链表整序 合并逆序 二路归并 头插法实现

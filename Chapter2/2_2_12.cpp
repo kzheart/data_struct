@@ -2,7 +2,7 @@
 // Created by kzheart on 2022/10/10.
 //
 
-#include "common.h"
+#include "list.h"
 
 /**
  * 算法思想: 题中给出了内部元素的范围是0到n 即有n+1种数字 创建一个n+1大小的数组 分别记录每种数字出现的个数最后比较即可
