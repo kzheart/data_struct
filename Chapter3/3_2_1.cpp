@@ -1,7 +1,7 @@
 //
 // Created by kzheart on 2022/10/15.
 //
-#define MAX 20
+#define MAX_STACK 20
 
 #include <cstdlib>
 #include <cstdio>
@@ -22,7 +22,7 @@ bool EnQueue(CycleQueue &q, int x) {
         return false;
     }
     q.data[q.rear] = x;
-    q.rear = (q.rear + 1) % MAX;
+    q.rear = (q.rear + 1) % MAX_STACK;
     if (q.rear == q.front) {
         q.tag = 1;
     }
@@ -38,7 +38,7 @@ bool DeQueue(CycleQueue &q, int &x) {
         return false;
     }
     x = q.data[q.front];
-    q.front = (q.front + 1) % MAX;
+    q.front = (q.front + 1) % MAX_STACK;
     if (q.rear == q.front) {
         q.tag = 0;
     }
@@ -47,10 +47,10 @@ bool DeQueue(CycleQueue &q, int &x) {
 
 int main() {
     CycleQueue q;
-    for (int i = 0; i < MAX + 1; i++) {
+    for (int i = 0; i < MAX_STACK + 1; i++) {
         EnQueue(q, i);
     }
-    for (int i = 0; i < MAX + 1; i++) {
+    for (int i = 0; i < MAX_STACK + 1; i++) {
         int x = 0;
         DeQueue(q, x);
         printf(" %d ", x);

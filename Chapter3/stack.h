@@ -8,15 +8,23 @@
 #include <cstdio>
 #include <cstdlib>
 
-#define MAX 50
+#define MAX_STACK 50
 
 typedef struct {
     int top = -1;
-    int data[MAX];
+    int data[MAX_STACK];
 } SqStack;
 
+bool isEmpty(SqStack s) {
+    return s.top <= -1;
+}
+
+bool isFull(SqStack s) {
+    return s.top >= MAX_STACK - 1;
+}
+
 bool push(SqStack &s, int x) {
-    if (s.top < MAX - 1) {
+    if (s.top < MAX_STACK - 1) {
         s.data[++s.top] = x;
         return true;
     } else
@@ -42,6 +50,13 @@ bool getTop(SqStack s, int &x) {
 }
 
 SqStack initSqStack(int a[], int length) {
+    SqStack s;
+    for (int i = 0; i < length; i++) {
+        push(s, a[i]);
+    }
+    return s;
+}
+SqStack initSqStack(char a[], int length) {
     SqStack s;
     for (int i = 0; i < length; i++) {
         push(s, a[i]);

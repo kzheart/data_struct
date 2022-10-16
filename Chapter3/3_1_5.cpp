@@ -1,11 +1,11 @@
 //
 // Created by kzheart on 2022/10/15.
 //
-#define MAX 100
+#define MAX_STACK 100
 typedef struct {
-    int data[MAX];
+    int data[MAX_STACK];
     int top1 = -1;//第一个栈栈顶
-    int top2 = MAX;//第二栈栈顶
+    int top2 = MAX_STACK;//第二栈栈顶
 } ShareStack;
 enum class StackId {
     S1, S2
