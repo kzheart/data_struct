@@ -25,10 +25,8 @@ bool isSymmetry(LinkList a) {
 int main() {
     int a[] = {1, 2, 2};
     int b[] = {1, 2, 2, 1};
-
     LinkList al;
     LinkList bl;
-
     endBuildLinkListHead(al, a, 3);
     endBuildLinkListHead(bl, b, 4);
     printLinkList(al);

@@ -15,6 +15,7 @@ typedef struct SqQueue {
     int data[MAX_QUEUE];
 };
 
+
 bool isFull(SqQueue queue) {
     return (queue.rear + 1 % MAX_QUEUE) == queue.front;
 }
